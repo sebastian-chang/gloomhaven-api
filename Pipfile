@@ -12,6 +12,7 @@ django-cors-headers = "*"
 djangorestframework = "*"
 requests = "*"
 whitenoise = "*"
+django-postgres-extensions = "*"
 
 [dev-packages]
 
