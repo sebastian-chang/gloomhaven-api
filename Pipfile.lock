@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6b095917445d5a1b6483c724f80b76edfe444a98ef7e39b931ae258bcb5e6fc8"
+            "sha256": "55900fdddb6e409d069cda46e26500e6042e50f08705b4000b494867d858cc12"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -54,14 +54,6 @@
             ],
             "index": "pypi",
             "version": "==3.7.0"
-        },
-        "django-postgres-extensions": {
-            "hashes": [
-                "sha256:0dc14112dfc898eeeda5c72bd3013ec34a6fe8769965b56a962fa2cc862983d3",
-                "sha256:902d333a012a15aa01798f0f670c68ee730f0ee73b507801301dda98032dc2e5"
-            ],
-            "index": "pypi",
-            "version": "==0.9.3"
         },
         "django-rest-auth": {
             "hashes": [
@@ -168,12 +160,12 @@
         },
         "typing-extensions": {
             "hashes": [
-                "sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918",
-                "sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c",
-                "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"
+                "sha256:0ac0f89795dd19de6b97debb0c6af1c70987fd80a2d62d1958f7e56fcc31b497",
+                "sha256:50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342",
+                "sha256:779383f6086d90c99ae41cf0ff39aac8a7937a9283ce0a414e5dd782f4c94a84"
             ],
             "markers": "python_version < '3.8'",
-            "version": "==3.7.4.3"
+            "version": "==3.10.0.0"
         },
         "urllib3": {
             "hashes": [

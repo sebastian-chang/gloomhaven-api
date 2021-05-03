@@ -7,7 +7,7 @@ from .models.character_class import CharacterClass
 class PerkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Perk
-        fields = ('id', 'quantity', 'action')
+        fields = ('perk_id', 'quantity', 'action')
 
 
 class ClassSerializer(serializers.ModelSerializer):
