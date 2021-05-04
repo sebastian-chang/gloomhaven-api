@@ -12,6 +12,21 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+import os
+import sys
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
+
+if os.getenv('ENV') == 'development':
+    DB_NAME = os.getenv('DB_NAME_DEV')
+    DB = {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': DB_NAME,
+    }
+    DEBUG = True
+    CORS_ORIGIN_WHITELIST = ['http://localhost:8080']
+
+CORS_ORIGIN_WHITELIST = ['http://localhost:8080']
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +40,7 @@ SECRET_KEY = 'django-insecure-8pp()ara@!2*$j5fl_y*$d2u4*mpr%7gr5g&0te(wdo&sde71t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,12 +53,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
