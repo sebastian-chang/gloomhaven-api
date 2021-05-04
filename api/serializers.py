@@ -13,5 +13,5 @@ class PerkSerializer(serializers.ModelSerializer):
 class ClassSerializer(serializers.ModelSerializer):
     class Meta:
         model = CharacterClass
-        fields = ('class_name', 'name', 'initials', 'is_starting',
-                  'symbol', 'image', 'logo', 'color', 'xp', 'hp', 'story', 'perks')
+        fields = ('class_name', 'name', 'initials', 'starting',
+                  'symbol', 'image', 'logo', 'color', 'xp_per_level', 'hp_per_level', 'story', 'perks')

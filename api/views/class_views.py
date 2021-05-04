@@ -12,7 +12,8 @@ class CharacterClasses(generics.ListCreateAPIView):
 
     def get(self, request):
         """Index request"""
-        data = ClassSerializer(CharacterClass, many=True).data
+        character_class = CharacterClass.objects.all()
+        data = ClassSerializer(character_class, many=True).data
         return Response({'classes': data})
 
 
