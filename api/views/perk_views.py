@@ -10,9 +10,10 @@ from ..serializers import PerkSerializer
 class Perks(generics.ListCreateAPIView):
     serializer_class = PerkSerializer
 
-    def get(self, request):
+    def get(self, request, cc):
         """Index request"""
-        data = PerkSerializer(Perk, many=True).data
+        perk = Perk.objects.filter(character_class=cc)
+        data = PerkSerializer(perk, many=True).data
         return Response({'perks': data})
 
 
